@@ -1,0 +1,100 @@
+body {
+    font-size: 10px;
+    background-color: #e5e7e8;
+    font-family: sans-serif;
+    margin: 0;
+}
+.responsive-container {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.wide .wide-doc {
+    background: #edf0f9;
+    background: rgba(237,240,249,0.4);
+    overflow: hidden;
+}
+.lt-ie8 .wide .wide-doc {
+    zoom: 1;
+}
+.lt-ie9 .wide .wide-doc {
+    background: transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66EDF0F9,endColorstr=#66EDF0F9);
+}
+.lt-ie9 .wide .wide-doc:nth-child(n) {
+    filter: none;
+}
+.wide .wide-doc .left-nav-panel{
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+}
+.wide .wide-doc .left-nav-panel ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wide .wide-doc .left-nav-panel ul.left-nav-blue li.left-nav-header {
+    background: rgba(217,222,234,0.7);
+    border-bottom: 1px solid #d9deea;
+    color: #46535e;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    cursor: default;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(237,240,249,0.8) inset;
+    -moz-box-shadow: 1px 1px 1px 0 rgba(237,240,249,0.8) inset;
+    box-shadow: 1px 1px 1px 0 rgba(237,240,249,0.8) inset;
+    -webkit-border-radius: 3px 0 0 0;
+    -moz-border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 0;
+}
+.wide .wide-doc .left-nav-panel ul.left-nav-blue li {
+    padding: 5px 0 5px 18px;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #9ca3a8;
+    font-weight: 600;
+}
+.wide .wide-doc .left-nav-panel ul.left-nav-blue li.selected {
+  color: #4c9cdf;
+  -webkit-box-shadow: 5px 0 0 0 #4c9cdf inset;
+  -moz-box-shadow: 5px 0 0 0 #4c9cdf inset;
+  box-shadow: 5px 0 0 0 #4c9cdf inset;
+}
+.wide .wide-doc .left-nav-panel ul.left-nav-blue li a {
+  color: #9ca3a8;
+}
+.wide .wide-doc .left-nav-panel ul.left-nav-blue li a:hover {
+  color: #4c9cdf;
+  text-decoration: none;
+}
+.wide .wide-doc .left-nav-panel ul.left-nav-blue li.selected a {
+  color: #4c9cdf;
+  text-decoration: none;
+}
+.wide .wide-doc .docs-data {
+    background: #fff;
+    max-width: 899px;
+    border-left: 1px solid #d9deea;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    width: 80%;
+    float: right;
+    box-sizing: border-box;
+}
+.wide .wide-doc .docs-data .doc-header{
+    padding-left: 20px;
+    font-size: 2.4em;
+    margin: 10px 0px;
+    color: #252c33;
+}
+.wide .wide-doc .docs-data .content {
+    padding: 10px 15px;
+    font-size: 1.3em;
+    color: #46535e;
+}

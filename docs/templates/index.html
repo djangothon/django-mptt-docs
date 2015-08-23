@@ -1,0 +1,41 @@
+{% load mptt_tags %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css"/>
+        <link rel="stylesheet" href="{{STATIC_URL}}docs/docs.css?v=0.1"/>
+    </head>
+    <body>
+        <div class="responsive-page denim-gray-texture">
+            <div class="responsive-container">
+                <div class="page-data">
+                    <div class="wide medium-margin">
+                        <div class="wide-doc">
+                            <div class="nav-header">
+                                <h1>{{ title }}</h1>
+                            </div>
+                            {% include "snippets/left_snippet.html" %}
+                            <div class="float-right docs-data darker">
+                                <h2 class="doc-header">{{ current_node.title }}</h2>
+                                <hr class="hr">
+                                <div class="content body-font medium-margin medium-margin-bottom">
+                                    {{ body_html|safe }}
+                                </div> <!-- content -->
+                            </div> <!-- docs-data -->
+                            <div class="clear"></div>
+                        </div> <!-- wide-doc -->
+                    </div> <!-- wide -->
+                    <div class="clear"></div>
+                </div> <!-- page-data -->
+            </div> <!-- responsice-container -->
+        </div> <!-- responsive-page -->
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+</html>

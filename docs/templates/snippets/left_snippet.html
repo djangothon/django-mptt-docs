@@ -1,0 +1,18 @@
+{% load mptt_tags %}
+
+<div class="left-nav-panel float-left">
+    <ul class="left-nav-blue left-nav-common">
+    {% recursetree nodes %}
+        {% if node.is_document %}
+        <li class="{% if node == current_node %}selected{% endif %}"><a href="{% url docs.views.view_doc node.full_slug %}">{{ node.title }}</a></li>
+        {% else %}
+        <li class="left-nav-header">{{ node.title }}</li>
+        {% endif %}
+
+        <!-- XXX: deal with children later -->
+            {% if not node.is_leaf_node %}
+                {{ children }}
+            {% endif %}
+    {% endrecursetree %}
+    </ul> <!-- left-nav -->
+</div>
